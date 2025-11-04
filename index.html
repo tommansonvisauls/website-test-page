@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tom Manson Visuals — Reel</title>
+<meta name="description" content="FPV & Action Sports Filmmaker — showreel" />
+<style>
+:root{
+--bg:#ffffff;
+--fg:#111;
+--muted:#e6e6e6;
+--accent:#000;
+--max-width:1100px;
+--hero-height:100vh;
+--nav-height:72px;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;font-size:16px;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
+/* header */
+.site-header{
+position:fixed;left:0;right:0;top:0;height:var(--nav-height);
+display:flex;align-items:center;justify-content:space-between;padding:0 22px;
+z-index:60;backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+transition: background-color .28s, box-shadow .28s, transform .28s;
+}
+.site-header.scrolled{
+background: rgba(255,255,255,0.7);
+box-shadow: 0 6px 18px rgba(15,15,15,0.06);
+transform: translateY(0);
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .logo{
+width:44px;height:44px;display:block;
+}
+.brand .name{font-weight:700;letter-spacing:.6px}
+.nav-ctas{display:flex;gap:12px;align-items:center}
+.btn{
+padding:10px 14px;border-radius:10px;border:1px solid rgba(0,0,0,0.08);
+background:transparent;font-weight:600;text-decoration:none;color:var(--fg);
+}
+/* hero */
+.hero{
+position:relative;height:var(--hero-height);overflow:hidden;
+display:flex;align-items:center;justify-content:center;
+}
+.video-wrap{
+position:absolute;inset:0;overflow:hidden;z-index:0;
+pointer-events:none; /* allow scrolling / clicking overlays */
+will-change:transform;
+}
+.video-wrap iframe{
+position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+width:177.77vh; /* 16:9 calc -> wide enough to fill horizontally at various heights */
+height:100vh;
+min-width:1200px; /* ensures wide devices still filled */
+border:0;
+pointer-events:auto; /* enable fullscreen and interactions if user taps */
+}
+/* dark overlay gradient for readability */
+.hero::after{
+content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.12) 0%, rgba(255,255,255,0.02) 40%, rgba(255,255,255,0.2) 100%);z-index:2;mix-blend-mode:multiply;
+pointer-events:none;
+}
+/* hero center content */
+.hero-content{
+position:relative;z-index:4;text-align:center;color:var(--bg);width:100%;max-width:var(--max-width);padding:0 20px;
+display:flex;flex-direction:column;align-items:center;gap:18px;
+}
+.hero .title{
+font-size:clamp(20px,4vw,32px);font-weight:700;color:var(--bg);letter-spacing:.6px;
+text-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+.hero .subtitle{color:rgba(255,255,255,0.9);font-weight:500}
+.cta-row{display:flex;gap:12px}
+.cta-primary{
+background:var(--bg);color:var(--fg);padding:12px 18px;border-radius:12px;font-weight:700;text-decoration:none;
+box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+.cta-ghost{background:transparent;border:1px solid rgba(255,255,255,0.85);color:var(--bg);padding:10px 16px;border-radius:10px;text-decoration:none}
+/* content section */
+main{position:relative;z-index:1}
+.section{
+max-width:var(--max-width);margin:0 auto;padding:64px 20px;
+}
+.about{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.about .col{flex:1 1 320px}
+.muted{color:#666}
+/* footer style */
+footer{padding:36px 20px;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent)}
+.brand-small{display:flex;gap:10px;align-items:center;color:#222}
+/* propeller watermark */
+.propeller{
+position:absolute;right:6%;bottom:6%;width:160px;opacity:0.08;z-index:3;pointer-events:none;
+}
+/* responsive tweaks */
+@media (max-width:920px){
+.video-wrap iframe{min-width:900px;width:200vh}
+.brand .name{display:none}
+.hero .title{font-size:18px}
+}
+@media (max-width:520px){
+.video-wrap iframe{min-width:600px;width:250vh}
+.site-header{padding:0 12px}
+.nav-ctas{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader" aria-hidden="false">
+<div class="brand">
+<!-- Replace src with your logo or inline SVG; small white/black logo recommended -->
+<img class="logo" src="YOUR_LOGO_SVG_OR_PNG" alt="Tom Manson Visuals logo">
+<div class="name">Tom Manson Visuals</div>
+</div>
+
+<nav class="nav-ctas" aria-label="Primary">
+<a class="btn" href="#work">Work</a>
+<a class="btn" href="#contact">Contact</a>
+<a class="btn" href="https://vimeo.com/1114592075?fl=ip&fe=ec" target="_blank" rel="noopener" id="openVimeo">Open Reel</a>
+</nav>
+</header>
+
+<section class="hero" id="hero">
+<div class="video-wrap" id="videoWrap" aria-hidden="true">
+<!-- Vimeo background: replace YOUR_VIMEO_ID -->
+<iframe id="vimeoBg"
+src="https://player.vimeo.com/video/1114592075?fl=ip&fe=ec?autoplay=1&muted=1&loop=1&background=1&quality=720p"
+frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+title="Tom Manson Visuals — Reel"></iframe>
+</div>
+
+<div class="hero-content" role="banner">
+<h1 class="title">Cinematic FPV & Action Sports Filmmaking</h1>
+<p class="subtitle">Tom Manson — showreel</p>
+<div class="cta-row">
+<a class="cta-primary" href="https://vimeo.com/YOUR_VIMEO_ID" target="_blank" rel="noopener">Watch the full reel</a>
+<a class="cta-ghost" href="#work">My Work</a>
+</div>
+</div>
+
+<!-- faint propeller watermark (inline svg) -->
+<svg class="propeller" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<g fill="none" stroke="#000" stroke-width="4" transform="translate(10,10) scale(0.9)">
+<path d="M100 20 C160 20 170 60 140 95 C110 130 85 160 60 140 C35 120 40 70 80 50 Z" fill="#000"/>
+<circle cx="100" cy="100" r="18" fill="#000"/>
+</g>
+</svg>
+</section>
+
+<main>
+<section id="work" class="section">
+<h2>Selected Clips</h2>
+<p class="muted">Short edits, event coverage, and cinematic lines — all shot FPV and stabilised rigs.</p>
+<!-- grid / thumbnails -->
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px">
+<a href="https://vimeo.com/YOUR_VIMEO_ID" class="thumb" style="text-decoration:none;color:inherit">
+<div style="background:var(--muted);height:140px;border-radius:10px;display:flex;align-items:center;justify-content:center">Thumbnail 1</div>
+<div style="padding-top:8px;font-weight:600">Pump track — Christchurch</div>
+</a>
+<div style="background:var(--muted);height:140px;border-radius:10px;display:flex;align-items:center;justify-content:center">Thumbnail 2</div>
+<div style="background:var(--muted);height:140px;border-radius:10px;display:flex;align-items:center;justify-content:center">Thumbnail 3</div>
+</div>
+</section>
+
+<section id="contact" class="section" style="padding-top:20px;padding-bottom:80px">
+<h2>Contact</h2>
+<p class="muted">For bookings & collabs:</p>
+<div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:12px">
+<div style="min-width:220px">
+<strong>Email</strong>
+<div>hello@tomansonvisuals.com</div>
+</div>
+<div style="min-width:160px">
+<strong>Instagram</strong>
+<div>@tom.manson_</div>
+</div>
+<div style="min-width:160px">
+<strong>Phone</strong>
+<div>022 651 5510</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="section" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;">
+<div class="brand-small">
+<img class="logo" src="YOUR_LOGO_SVG_OR_PNG" style="width:36px;height:36px" alt="">
+<div style="font-weight:700">Tom Manson Visuals</div>
+</div>
+<div style="color:#666">© <span id="year"></span> Tom Manson. All rights reserved.</div>
+</div>
+</footer>
+
+<script>
+// Replace placeholder year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Parallax effect on scroll: hero shrinks and moves slightly
+const hero = document.getElementById('hero');
+const videoWrap = document.getElementById('videoWrap');
+const siteHeader = document.getElementById('siteHeader');
+
+const maxShift = 100; // px upward shift
+const minScale = 0.75; // when scrolled down
+
+function onScroll(){
+const sc = window.scrollY;
+// header background toggle
+if(sc > 30) siteHeader.classList.add('scrolled'); else siteHeader.classList.remove('scrolled');
+
+// compute progress 0..1 for first hero height
+const heroH = hero.offsetHeight || window.innerHeight;
+const progress = Math.min(1, sc / heroH);
+
+// translate and scale the video wrap for parallax
+const translateY = Math.round(progress * maxShift);
+const scale = 1 - (progress * (1 - minScale));
+videoWrap.style.transform = `translateY(-${translateY}px) scale(${scale})`;
+// reduce overlay intensity (optional) by adjusting hero opacity
+hero.style.opacity = 1 - Math.min(0.16, progress * 0.14);
+}
+
+window.addEventListener('scroll', onScroll, {passive:true});
+window.addEventListener('resize', onScroll);
+onScroll();
+
+// Accessibility / user choice: if user taps "Open Reel", open Vimeo in new tab
+const openVimeo = document.getElementById('openVimeo');
+openVimeo.addEventListener('click', (e) => {
+// default is to open new tab - nothing extra needed
+});
+
+// Mobile recommendation: autoplay may not run; provide a subtle overlay play CTA if needed
+// (left as an exercise if you want a custom lightbox player)
+</script>
+
+</body>
+</html>
