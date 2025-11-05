@@ -123,7 +123,9 @@ transition:opacity .8s ease-out, transform .8s ease-out;
 /* footer */
 footer{padding:36px 20px;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent)}
 .brand-small{display:flex;gap:10px;align-items:center;color:#222}
-
+.propeller{
+position:absolute;right:6%;bottom:6%;width:160px;opacity:0.08;z-index:3;pointer-events:none;
+}
 
 @media (max-width:920px){
 .video-wrap iframe{min-width:900px;width:200vh}
@@ -188,7 +190,7 @@ allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                 </a>
 
                 <!-- Thumbnail 2 - REPLACE WITH YOUR VIDEO -->
-                <a href="https://vimeo.com/1133308234" class="thumb" style="text-decoration:none;color:inherit" target="_blank">
+                <a href="https://vimeo.com/PASTE_YOUR_SECOND_VIDEO_ID" class="thumb" style="text-decoration:none;color:inherit" target="_blank">
                     <div style="background:var(--muted);height:140px;border-radius:10px;display:flex;align-items:center;justify-content:center">
                         <div style="color:#666">[Thumbnail 2 Placeholder]</div>
                     </div>
@@ -211,10 +213,44 @@ allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <h2>Contact</h2>
 <p class="muted">For bookings & collaborations:</p>
 <div style="display:flex;gap:20px;flex-wrap:wrap;margin-top:12px">
-<div><strong>Email</strong><div>tommansonvisuals@gmail.com</div></div>
-<div><strong>Instagram</strong><div>@tom.manson_</div></div>
-<div><strong>Phone</strong><div>022 651 5510</div></div>
+  <div>
+    <strong>Email</strong>
+    <div>
+      <a href="mailto:tommansonvisuals@gmail.com" 
+         style="color:var(--text);text-decoration:none;transition:color 0.2s ease"
+         onmouseover="this.style.color='#007AFF'" 
+         onmouseout="this.style.color='var(--text)'">
+        tommansonvisuals@gmail.com
+      </a>
+    </div>
+  </div>
+  
+  <div>
+    <strong>Instagram</strong>
+    <div>
+      <a href="https://www.instagram.com/tom.manson_/" 
+         target="_blank"
+         style="color:var(--text);text-decoration:none;transition:color 0.2s ease"
+         onmouseover="this.style.color='#E1306C'" 
+         onmouseout="this.style.color='var(--text)'">
+        @tom.manson_
+      </a>
+    </div>
+  </div>
+
+  <div>
+    <strong>Phone</strong>
+    <div>
+      <a href="tel:+64226515510" 
+         style="color:var(--text);text-decoration:none;transition:color 0.2s ease"
+         onmouseover="this.style.color='#34C759'" 
+         onmouseout="this.style.color='var(--text)'">
+        022 651 5510
+      </a>
+    </div>
+  </div>
 </div>
+
 </section>
 </main>
 
